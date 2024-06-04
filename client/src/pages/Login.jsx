@@ -13,7 +13,7 @@ export const Login = () => {
       </div>
 
       {/* Card for the login form */}
-      <div className="absolute z-10 flex flex-col items-center p-8 bg-white card">
+      <div className="absolute z-10 flex flex-col items-center p-8 bg-white cardlogin">
         {/* Contenido */}
         {/* Logo */}
         <img src={logo} alt="StudyEasy" className="logoform mb-4" />
@@ -48,7 +48,6 @@ export const Login = () => {
         <button className="w-1/4 bluebg text-white rounded-xl py-3 mb-4 h-2/4">
           ¡Vamos allá!
         </button>
-
         <br></br>
         <div className="flex justify-end w-full text-sm ">
           <a href="#" className="hover:underline bluetext kodchasan">
