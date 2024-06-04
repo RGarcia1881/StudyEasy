@@ -1,0 +1,24 @@
+.navbar {
+    box-shadow: 0 4px 2px -2px gray;
+  }
+
+  .logonav {
+    height: 8%;
+    width: 8%;
+  }
+
+  .navlink {
+    font-family: 'Kodchasan', sans-serif;
+    color: #1380E4;
+    opacity: 40%;
+    transition: color .5s ease, opacity .5s ease;
+  }
+  
+  .navlink:hover {
+    color: #1380E4;
+    opacity: 100;
+  }
+
+  .alignright {
+    padding-right: 1%;
+  }
