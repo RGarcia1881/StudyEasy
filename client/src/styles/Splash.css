@@ -1,0 +1,30 @@
+@keyframes fill {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fill-animation {
+  clip-path: inset(0 0 0 0);
+  animation: fill 3s ease-in-out forwards;
+  z-index: 5;
+}
+
+.logo {
+  position: relative;
+  z-index: 10;
+  opacity: 0.25; /* Inicialmente, baja opacidad */
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.kodchasan {
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.blue {
+    background-color: #1380E4;
+    width: 35%;
+    height: 50%;
+    border-radius: 40px;
+    rotate: 40deg;
+    left: -10%;
+    top: 55%;
+    overflow: hidden;
+}
+
+.lightblue {
+    background-color: #1380E4;
+    opacity: 15%;
+    width: 43%;
+    height: 50%;
+    border-radius: 40px;
+    rotate: 40deg;
+    left: -7%;
+    top: 20%;
+    overflow: hidden;
+}
+
+.card {
+    left: 50%;
+    width: 40%;
+    height: 50%;
+    top: 8%;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+.bluetext {
+    color: #1380E4;
+}
+
+.bluebg{
+    background: #1380E4;
+}
+
+.logoform {
+    height: 50%;
+    width: 28%;
+}
