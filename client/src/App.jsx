@@ -3,6 +3,8 @@ import { Home } from "./pages/Home";
 import { Splash } from "./pages/Splash";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
+import {Class} from "./pages/Class";
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Route path="/splash" element={<Splash />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/class" element={<Class />} />
       </Routes>
     </BrowserRouter>
   );

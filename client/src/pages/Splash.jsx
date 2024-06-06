@@ -3,14 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Splash.css";
 import logo from "../assets/StudyEasy.png";
 
-// export function Splash() {
-//   return (
-//     <div className="flex justify-center items-center h-screen">
-//       <img src={logo} />
-//     </div>
-//   );
-// }
-
 export const Splash = () => {
   const [animate, setAnimate] = useState(false);
   const navigate = useNavigate();
