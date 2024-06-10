@@ -5,7 +5,7 @@ import "../styles/Navbar.css"; // Importa los estilos de Navbar
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between alignright py-5 bg-white">
+    <nav className="flex items-center justify-between alignright py-5 bg-white ">
       <div className="flex items-center">
         <img src={logo} alt="StudyEasy" className="logonav mr-10" />
 

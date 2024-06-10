@@ -1,8 +1,2 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&display=swap');
 @import 'boxicons/css/boxicons.min.css';
-
-
-.footerpos {
-    bottom: -40%;
-    overflow: hidden;
-}

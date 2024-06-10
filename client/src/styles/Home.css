@@ -1,0 +1,139 @@
+.home-container {
+    padding: 20px;
+  }
+  
+  .welcome-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 0px; /* Ajusta este valor según sea necesario */
+  }
+  
+  .text-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-section p {
+    font-size: 1.5rem;
+    color: #707070;
+  }
+  
+  .backpack {
+    width: 700px;
+    height: auto;
+  }
+
+  .study-section {
+    margin-bottom: 40px;
+  }
+  
+  .study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .study-section h2 {
+    font-size: 1.5rem;
+    color: #707070;
+  }
+  
+  .study-cards {
+    display: flex;
+    justify-content: space-between; /* Distribuye las tarjetas equitativamente */
+    gap: 20px; /* Espacio entre las tarjetas */
+  }
+  
+  .study-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 16px; /* Aumentar el radio de borde para esquinas redondeadas */
+    width: 150%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .subject-title {
+    font-weight: bold;
+    color: #707070;
+    margin-bottom: 8px;
+  }
+  
+  .subject-description {
+    color: #b0b0b0;
+  }
+  
+  .view-all {
+    color: #1380E4;
+    text-decoration: none;
+  }
+
+  .subjects-section h2 {
+    font-size: 1.5rem;
+    color: #707070;
+    margin-bottom: 20px;
+  }
+  
+  .subjects-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subject-card {
+    padding: 20px;
+    border-radius: 16px;
+    width: 45%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .subject-card p {
+    margin: 0;
+  }
+  
+  .subject-card.spanish {
+    background-color: #ff7f50;
+    background-image: url('../assets/spanish-background.png'); /* Asegúrate de que esta ruta sea correcta */
+  }
+  
+  .subject-card.math {
+    background-color: #1e90ff;
+    background-image: url('../assets/math-background.png'); /* Asegúrate de que esta ruta sea correcta */
+  }
+  
+  .subject-icon {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+  }
+  
+  .subject-card.spanish .subject-icon {
+    background-image: url('../assets/spanish-icon.png'); /* Asegúrate de que esta ruta sea correcta */
+  }
+  
+  .subject-card.math .subject-icon {
+    background-image: url('../assets/math-icon.png'); /* Asegúrate de que esta ruta sea correcta */
+  }
+  
+  .subject-name {
+    font-size: 1.5rem;
+    color: #ff7f50;
+  }

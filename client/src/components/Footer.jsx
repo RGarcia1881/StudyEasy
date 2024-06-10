@@ -4,7 +4,7 @@ import Waves from "./Waves";
 
 const Footer = () => {
   return (
-    <footer className="relative text-white">
+    <footer className="text-white relative ">
       <div className="flex space-x-24 translate-y-24">
         <div className="flex flex-col translate-x-10 translate-y-3">
           <img src={logo} alt="StudyEasy" className="w-16 h-16" />
@@ -33,7 +33,9 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <Waves />
+      <div>
+        <Waves />
+      </div>
     </footer>
   );
 };

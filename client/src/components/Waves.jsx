@@ -3,7 +3,7 @@ import "../styles/Waves.css";
 
 const Waves = () => {
   return (
-    <div className="wave-container pb-12">
+    <div className="wave-container">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <defs>
           <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
