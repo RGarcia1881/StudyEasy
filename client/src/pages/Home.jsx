@@ -98,7 +98,7 @@ export function Home() {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
