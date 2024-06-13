@@ -1,0 +1,50 @@
+<div className="home-container items-center">
+        <div className="flex spac">
+          <div className="flex-col">
+            <h1>
+              Bienvenido <span className="highlight">Juan</span>
+            </h1>
+            <p>¿Qué vamos a estudiar hoy?</p>
+          </div>
+          <div className="flex-col">
+            <img
+              src={backpackImage}
+              alt="Study materials"
+              className="welcome-image"
+            />
+          </div>
+        </div>
+
+        <div className="study-section">
+          <h2>Te quedaste en...</h2>
+          <div className="study-cards">
+            <div className="study-card">
+              <p>Español</p>
+              <p>Vocales y Abecedario</p>
+            </div>
+            <div className="study-card">
+              <p>Matemáticas</p>
+              <p>Sumas y restas</p>
+            </div>
+            <div className="study-card">
+              <p>Español</p>
+              <p>Verbos conjugados</p>
+            </div>
+          </div>
+          <a href="#" className="view-all">
+            Ver todo
+          </a>
+        </div>
+
+        <div className="subjects-section">
+          <h2>Materias</h2>
+          <div className="subjects-cards">
+            <div className="subject-card spanish">
+              <p>Español</p>
+            </div>
+            <div className="subject-card math">
+              <p>Matemáticas</p>
+            </div>
+          </div>
+        </div>
+      </div>

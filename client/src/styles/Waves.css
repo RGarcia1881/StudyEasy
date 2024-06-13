@@ -10,14 +10,15 @@
   }
 
   .wave {
-    position: relative;
+    position: absolute;
     display: block;
     width: calc(100% + 1.3px);
     height: 150px;
+    position: fixed
   }
   
   svg.wave {
-    position: relative;
+    position: fixed;
     bottom: -1px;
     width: 100%;
     height: auto;

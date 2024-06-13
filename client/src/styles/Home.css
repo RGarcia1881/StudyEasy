@@ -1,0 +1,213 @@
+.home-container {
+    padding: 20px;
+  }
+  
+  .welcome-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 0px; /* Ajusta este valor según sea necesario */
+  }
+  
+  .text-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-section p {
+    font-size: 1.5rem;
+    color: #707070;
+  }
+  
+  .backpack {
+    width: 700px;
+    height: auto;
+  }
+
+  .study-section {
+    margin-bottom: 40px;
+  }
+  
+  .study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .study-section h2 {
+    font-size: 1.5rem;
+    color: #707070;
+  }
+  
+  .study-cards {
+    display: flex;
+    justify-content: space-between; /* Distribuye las tarjetas equitativamente */
+    gap: 20px; /* Espacio entre las tarjetas */
+  }
+  
+  .study-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 16px; /* Aumentar el radio de borde para esquinas redondeadas */
+    width: 150%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.3s;
+  }
+
+  .study-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .subject-title {
+    font-weight: bold;
+    color: #707070;
+    margin-bottom: 8px;
+  }
+  
+  .subject-description {
+    color: #b0b0b0;
+  }
+  
+  .view-all {
+    color: #1380E4;
+    text-decoration: none;
+  }
+
+  .subjects-section h2 {
+    font-size: 1.5rem;
+    color: #707070;
+    margin-bottom: 20px;
+  }
+  
+  .subjects-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subject-card {
+    padding: 4%;
+    border-radius: 30px;
+    width: 40%;
+    height: 600%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply; /* Asegura que el color de fondo y la imagen de fondo se mezclen */
+  }
+  
+  .subject-card p {
+    margin: 0;
+  }
+  
+  .subject-card.math {
+    background-color: #1e90ff;
+    opacity: 50%;
+    transition: 0.3s;
+    
+  }
+
+  .subject-card.math:hover {
+    transform: translateY(-5px);
+    opacity: 100%;
+    transition: transform 0.3s;
+  }
+
+  .subject-card.bg{
+    background-image: url('../assets/Books.png');
+    z-index: 0;
+  }
+
+  .subject-card.spanish {
+    background-color: #ff7f50;
+    opacity: 50%;
+    transition: 0.3s;
+  }
+
+  .subject-card.spanish:hover {
+    transform: translateY(-5px);
+    opacity: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .subject-icon {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+  }
+  
+  .subject-name {
+    font-size: 1.5rem;
+    color: #ff7f50;
+  }
+
+  .graytxt {
+    font-size: 180%;
+    color: #939393;
+  }
+
+  /* Estilos para las bolitas decorativas */
+.decorative-balls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Asegura que no interfieran con la interacción del usuario */
+}
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.ball-blue {
+  width: 80px;
+  height: 80px;
+  background-color: #add8e6;
+  top: 45%;
+  left: 12%;
+}
+
+.ball-orange {
+  width: 100px;
+  height: 100px;
+  background-color: #ffa07a;
+  top: 30%;
+  left: 28%;
+}
+
+.ball-blue-small {
+  width: 50px;
+  height: 50px;
+  background-color: #add8e6;
+  bottom: 35%;
+  left: 28%;
+}
+
+.ball-orange-small {
+  width: 50px;
+  height: 50px;
+  background-color: #ffa07a;
+  bottom: 25%;
+  left: 18%;
+}

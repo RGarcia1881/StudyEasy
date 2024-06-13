@@ -3,8 +3,12 @@ import "../styles/Waves.css";
 
 const Waves = () => {
   return (
-    <div className="wave-container pb-12">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <div className="wave-container fixed ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className="fixed"
+      >
         <defs>
           <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop
@@ -17,6 +21,12 @@ const Waves = () => {
             />
           </linearGradient>
         </defs>
+        <g className="parallax">
+          <use href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
         <path
           fill="url(#waveGradient)"
           fill-opacity="1"
