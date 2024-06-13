@@ -16,6 +16,13 @@ export function Class() {
             <div className="titles">
               <h1>Clase 1</h1>
               <h2>Vocales y Abecedario</h2>
+              {/* Bolitas decorativas */}
+              <div className="decorative-balls-class ">
+              <div className="ball ball-blue-class"></div>
+              <div className="ball ball-orange-class"></div>
+              <div className="ball ball-blue-small-class"></div>
+              <div className="ball ball-orange-small-class"></div>
+            </div>
             </div>
           </div>
           <h3 className="subtitle">Título</h3>
