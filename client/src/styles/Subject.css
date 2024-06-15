@@ -13,6 +13,7 @@
   .text-section h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    background-image: url('../assets/ManchaN.png');
   }
   
   .text-section p {
@@ -184,15 +185,15 @@
   width: 80px;
   height: 80px;
   background-color: #add8e6;
-  top: 45%;
-  left: 12%;
+  top: 26%;
+  left: 3%;
 }
 
 .ball-orange {
   width: 100px;
   height: 100px;
   background-color: #ffa07a;
-  top: 30%;
+  top: 16%;
   left: 28%;
 }
 
@@ -210,4 +211,12 @@
   background-color: #ffa07a;
   bottom: 25%;
   left: 18%;
+}
+
+.bgtxt {
+    z-index: -1;
+    position: absolute;
+    top: 5%;
+    left: 37%;
+    width: 43%;
 }

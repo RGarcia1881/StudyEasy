@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import backpackImage from "../assets/Backpack.png";
+import backpackImage from "../assets/Utiles.png";
+import bg from "../assets/ManchaN.png";
 import "../styles/Subject.css";
 
 export function Subject() {
@@ -12,12 +13,6 @@ export function Subject() {
       <div className="home-container kodchasan overflow-hidden">
         {/* Welcome section */}
         <div className="welcome-section flex justify-start items-center py-10 -mb-32 -mt-32 translate-x-24 overflow-hidden">
-          <div className="text-section text-right pl-64">
-            <h1 className="text-6xl">
-              Bienvenido <span className="text-blue-600">Juan</span>
-            </h1>
-            <p className="text-2xl text-gray-600">¿Qué vamos a estudiar hoy?</p>
-          </div>
           <div className="image-section">
             <img
               src={backpackImage}
@@ -25,9 +20,15 @@ export function Subject() {
               className="backpack"
             />
           </div>
+          <div className="text-section text-center pl-32">
+            <img src={bg} className="bgtxt" />
+            <i className="bx bxs-book-open bx-lg icon text-white ml-2 mr-3"></i>
+            <h1 className="text-6xl text-white">Español</h1>
+            <h5 className="text-3xl text-white">¿Qué tal algo de letras?</h5>
+          </div>
 
           {/* Bolitas decorativas */}
-          <div className="decorative-balls ">
+          <div className="decorative-balls">
             <div className="ball ball-blue"></div>
             <div className="ball ball-orange"></div>
             <div className="ball ball-blue-small"></div>
@@ -71,30 +72,68 @@ export function Subject() {
         </div>
       </div>
 
-      {/* Subjects Section */}
-      <div className="subjects-section kodchasan m-11">
+      {/* Classes Section */}
+      <div className="study-section kodchasan m-11">
+        <p className="graytxt">Lista de clases</p>
         <br />
-        <h2 className="graytxt">Materias</h2>
-        <br />
-        <div className="subjects-cards flex justify-between mx-48">
-          <div className="subject-card bg spanish">
-            <i className="bx bxs-book-open bx-lg icon text-white ml-2 mr-3"></i>
+        <div className="study-cards flex justify-between mb-4">
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
           </div>
 
-          <div className="subject-card bg math">
-            <div className="subject-icon">
-              <i className="bx bx-math bx-lg text-white ml-2 mr-3"></i>
-            </div>
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
+          </div>
+
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
+          </div>
+
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
           </div>
         </div>
 
-        <div className="subjects-text flex justify-between items-center mx-48 mt-4">
-          <p className="text-lg text-center textspanish w-2/5 text-gray-600">
-            Español
-          </p>
-          <p className="text-lg text-center textmath w-2/5 text-gray-600">
-            Matemáticas
-          </p>
+        <div className="study-cards flex justify-between mb-4">
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
+          </div>
+
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
+          </div>
+
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
+          </div>
+
+          <div>
+            <div className="study-card w-96 h-36"></div>
+            <br />
+            <p className="subject-title">Español</p>
+            <p className="subject-description">Vocales y Abecedario</p>
+          </div>
         </div>
       </div>
 
