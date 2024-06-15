@@ -8,6 +8,31 @@ export function Home() {
   return (
     <div>
       <Navbar />
+<<<<<<< HEAD
+      <h1 className="text-blue-800">Home</h1>
+      <p>Welcome to the home page!</p>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+=======
 
       <div className="home-container kodchasan overflow-hidden">
         {/* Welcome section */}
@@ -106,6 +131,7 @@ export function Home() {
         </div>
       </div>
 
+>>>>>>> 5153a3fe10ea8c17aa5f13a4de2f5e5b8834f9db
       <Footer />
     </div>
   );

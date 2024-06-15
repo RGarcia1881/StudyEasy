@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.class-container {
+    font-family: 'Kodchasan', sans-serif;
+    color: #333;
+    padding: 0 20px; /* Añade relleno a los lados */
+    box-sizing: border-box; /* Asegura que el relleno se incluya en el tamaño total del contenedor */
+}
+
+.content {
+    max-width: 1200px; /* Define un ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Añade relleno dentro del contenedor */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 250px;
+    margin-right: 10px;
+}
+
+.titles h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.titles h2 {
+    font-size: 40px;
+    color: #777;
+}
+
+.subtitle {
+    color: #FF6F61;
+    margin-top: 20px;
+}
+
+/* Esta madre nomas es para ver el rectangulo gris en donde va el video */
+.video {
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.video-label{
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.congratulations {
+    color: #FF6F61;
+}
+
+.ready-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.decorative-balls-class {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Asegura que no interfieran con la interacción del usuario */
+}
+
+.ball-class {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.ball-blue-class {
+  width: 80px;
+  height: 80px;
+  background-color: #add8e6;
+  top: 36%;
+  right: 43%;
+}
+
+.ball-orange-class {
+  width: 100px;
+  height: 100px;
+  background-color: #ffa07a;
+  top: 15%;
+  right: 10%;
+}
+
+.ball-blue-small-class {
+  width: 50px;
+  height: 50px;
+  background-color: #add8e6;
+  bottom: 45%;
+  right: 5%;
+}
+
+.ball-orange-small-class {
+  width: 50px;
+  height: 50px;
+  background-color: #ffa07a;
+  bottom: 40%;
+  right: 32%;
+}
