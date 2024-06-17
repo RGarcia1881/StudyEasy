@@ -1,43 +1,47 @@
 .orange {
-    background-color: #FF924C;
-    width: 50%;
-    height: 50%;
-    border-radius: 40px;
-    rotate: 0deg;
-    left: 60%;
-    top: 75%;
-    overflow: hidden;
+  background-color: #ff924c;
+  width: 50%;
+  height: 50%;
+  border-radius: 40px;
+  rotate: 0deg;
+  left: 60%;
+  top: 75%;
+  overflow: hidden;
 }
 
 .lightorange {
-    background-color: #FF924C;
-    opacity: 15%;
-    width: 43%;
-    height: 50%;
-    border-radius: 40px;
-    rotate: -45deg;
-    left: 75%;
-    top: 43%;
-    overflow: hidden;
+  background-color: #ff924c;
+  opacity: 15%;
+  width: 43%;
+  height: 50%;
+  border-radius: 40px;
+  rotate: -45deg;
+  left: 75%;
+  top: 43%;
+  overflow: hidden;
+}
+
+.light-orange-button {
+  background-color: #ffbf97;
 }
 
 .cardregister {
-    left: 5%;
-    width: 40%;
-    height: 50%;
-    top: 8%;
-    font-family: 'Kodchasan', sans-serif;
+  left: 5%;
+  width: 40%;
+  height: 50%;
+  top: 8%;
+  font-family: "Kodchasan", sans-serif;
 }
 
 .orangetext {
-    color: #FF924C;
+  color: #ff924c;
 }
 
-.orangebg{
-    background: #FF924C;
+.orangebg {
+  background: #ff924c;
 }
 
 .logoformregister {
-    height: 50%;
-    width: 28%;
+  height: 50%;
+  width: 28%;
 }

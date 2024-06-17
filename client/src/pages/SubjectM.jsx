@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import backpackImage from "../assets/Utiles.png";
-import bg from "../assets/ManchaN.png";
+import bg from "../assets/ManchaM.png";
 import "../styles/Subject.css";
 
-export function Subject() {
+export function SubjectM() {
   return (
     <div>
       <Navbar />
@@ -22,9 +22,9 @@ export function Subject() {
           </div>
           <div className="text-section text-center pl-32">
             <img src={bg} className="bgtxt" />
-            <i className="bx bxs-book-open bx-lg icon text-white ml-2 mr-3"></i>
-            <h1 className="text-6xl text-white">Español</h1>
-            <h5 className="text-2xl text-white">¿Qué tal algo de letras?</h5>
+            <i className="bx bx-math bx-lg icon text-white ml-2 mr-3"></i>
+            <h1 className="text-6xl text-white">Matemáticas</h1>
+            <h5 className="text-2xl text-white">¿Qué tal algo de numeros?</h5>
           </div>
 
           {/* Bolitas decorativas */}

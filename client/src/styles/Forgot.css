@@ -1,0 +1,104 @@
+.forgot-container {
+  padding-top: 40px;
+}
+
+.spacex {
+  padding-left: 34.5%;
+}
+
+.topsection {
+  padding-bottom: 20%;
+}
+
+.forgot-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+.forgot-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 130%;
+}
+
+.forgot-logo {
+  width: 9%;
+}
+
+.forgot-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.forgot-circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #000e2a;
+  margin-bottom: 20px;
+}
+
+.forgot-circle-bottom {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #0a1128;
+  position: absolute;
+  opacity: 20%;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+
+.forgot-title {
+  font-size: 24px;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.forgot-subtitle {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.forgot-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #e9ecef;
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.forgot-input-container i {
+  font-size: 20px;
+  color: #6c757d;
+  margin-right: 10px;
+}
+
+.forgot-input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  flex: 1;
+}
+
+.forgot-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.forgot-button:hover {
+  background-color: #5a6268;
+}

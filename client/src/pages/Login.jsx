@@ -8,12 +8,12 @@ export const Login = () => {
     <div className="flex justify-center items-center h-screen overflow-hidden bg-white">
       {/* Rectangles for the background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="lightblue absolute transform"></div>
-        <div className="blue absolute transform "></div>
+        <div className="lightblue absolute transform rectangle-lightblue-animation"></div>
+        <div className="blue absolute transform rectangle-blue-animation"></div>
       </div>
 
       {/* Card for the login form */}
-      <div className="absolute z-10 flex flex-col items-center p-8 bg-white cardlogin">
+      <div className="absolute z-10 flex flex-col items-center p-8 bg-white cardlogin cardlogin-animation">
         {/* Contenido */}
         {/* Logo */}
         <img src={logo} alt="StudyEasy" className="logoform mb-4" />
@@ -45,28 +45,31 @@ export const Login = () => {
           </div>
         </div>
 
-        <button className="w-1/4 bluebg text-white rounded-xl py-3 mb-4 h-2/4">
+        <button
+          href="/home"
+          className="w-1/4 bluebg text-white rounded-xl py-3 mb-4 h-2/4"
+        >
           ¡Vamos allá!
         </button>
         <br></br>
         <div className="flex justify-end w-full text-sm ">
-          <a href="#" className="hover:underline bluetext kodchasan">
+          <a href="/forget" className="hover:underline bluetext kodchasan">
             Lo olvidé...
           </a>
         </div>
         <br></br>
         <div className="flex justify-end w-full text-sm ">
-          <a href="#" className="hover:underline kodchasan">
+          <a href="/home" className="hover:underline kodchasan">
             Solo vengo de paso
           </a>
         </div>
+      </div>
 
-        {/* <div className="absolute bottom-8 left-8 flex items-center space-x-2">
-          <button className="bg-blue-300 text-white rounded-full px-4 py-2 flex items-center">
-            <i className="fas fa-arrow-left mr-2"></i>
-            No tengo cuenta
-          </button>
-        </div> */}
+      <div className="absolute bottom-12 left-12 flex items-center space-x-2">
+        <button className="bg-blue-300 text-white rounded-full px-4 py-2 flex items-center cardlogin-animation">
+          <i className="fas fa-arrow-left mr-2"></i>
+          No tengo cuenta
+        </button>
       </div>
     </div>
   );

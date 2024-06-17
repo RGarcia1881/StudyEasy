@@ -60,25 +60,12 @@ export const Register = () => {
         <button className="w-1/4 orangebg text-white rounded-xl py-3 mb-4 h-2/4">
           ¡Anotáme!
         </button>
-        <br></br>
-        <div className="flex justify-end w-full text-sm ">
-          <a href="#" className="hover:underline bluetext kodchasan">
-            Lo olvidé...
-          </a>
-        </div>
-        <br></br>
-        <div className="flex justify-end w-full text-sm ">
-          <a href="#" className="hover:underline kodchasan">
-            Solo vengo de paso
-          </a>
-        </div>
-
-        {/* <div className="absolute bottom-8 left-8 flex items-center space-x-2">
-          <button className="bg-blue-300 text-white rounded-full px-4 py-2 flex items-center">
-            <i className="fas fa-arrow-left mr-2"></i>
-            No tengo cuenta
-          </button>
-        </div> */}
+      </div>
+      <div className="absolute bottom-20 right-80 flex items-center space-x-2">
+        <button className="light-orange-button text-white text-3xl kodchasan rounded-full px-4 py-2 flex items-center">
+          <i className="fas fa-arrow-left mr-2"></i>
+          Ya tengo cuenta
+        </button>
       </div>
     </div>
   );
