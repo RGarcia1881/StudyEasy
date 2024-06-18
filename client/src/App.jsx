@@ -7,6 +7,8 @@ import { Class } from "./pages/Class";
 import { Subject } from "./pages/Subject";
 import { SubjectM } from "./pages/SubjectM";
 import { Forgot } from "./pages/Forgot";
+import { Profile } from "./pages/Profile";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/esp" element={<Subject />} />
         <Route path="/math" element={<SubjectM />} />
         <Route path="/forgot" element={<Forgot />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
