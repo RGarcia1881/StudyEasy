@@ -53,7 +53,7 @@ export const Login = () => {
         </button>
         <br></br>
         <div className="flex justify-end w-full text-sm ">
-          <a href="/forget" className="hover:underline bluetext kodchasan">
+          <a href="/forgot" className="hover:underline bluetext kodchasan">
             Lo olvidé...
           </a>
         </div>
