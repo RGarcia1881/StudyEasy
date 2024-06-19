@@ -10,22 +10,22 @@ class Subject(models.Model):
 class Class(models.Model):
     
     LESSON_PICTURE_OPTIONS = [
-        ('client/src/assets/Lesson/Esp1.png', 'Esp1'),
-        ('client/src/assets/Lesson/Esp2.png', 'Esp2'),
-        ('client/src/assets/Lesson/Esp3.png', 'Esp3'),
-        ('client/src/assets/Lesson/Esp4.png', 'Esp4'),
-        ('client/src/assets/Lesson/Esp5.png', 'Esp5'),
-        ('client/src/assets/Lesson/Esp6.png', 'Esp6'),
-        ('client/src/assets/Lesson/Esp7.png', 'Esp7'),
-        ('client/src/assets/Lesson/Esp8.png', 'Esp8'),
-        ('client/src/assets/Lesson/Math1.png', 'Math1'),
-        ('client/src/assets/Lesson/Math2.png', 'Math2'),
-        ('client/src/assets/Lesson/Math3.png', 'Math3'),
-        ('client/src/assets/Lesson/Math4.png', 'Math4'),
-        ('client/src/assets/Lesson/Math5.png', 'Math5'),
-        ('client/src/assets/Lesson/Math6.png', 'Math6'),
-        ('client/src/assets/Lesson/Math7.png', 'Math7'),
-        ('client/src/assets/Lesson/Math8.png', 'Math8'),
+        ('../public/assets/Lesson/Esp1.png', 'Esp1'),
+        ('../public/assets/Lesson/Esp2.png', 'Esp2'),
+        ('../public/assets/Lesson/Esp3.png', 'Esp3'),
+        ('../public/assets/Lesson/Esp4.png', 'Esp4'),
+        ('../public/assets/Lesson/Esp5.png', 'Esp5'),
+        ('../public/assets/Lesson/Esp6.png', 'Esp6'),
+        ('../public/assets/Lesson/Esp7.png', 'Esp7'),
+        ('../public/assets/Lesson/Esp8.png', 'Esp8'),
+        ('../public/assets/Lesson/Math1.png', 'Math1'),
+        ('../public/assets/Lesson/Math2.png', 'Math2'),
+        ('../public/assets/Lesson/Math3.png', 'Math3'),
+        ('../public/assets/Lesson/Math4.png', 'Math4'),
+        ('../public/assets/Lesson/Math5.png', 'Math5'),
+        ('../public/assets/Lesson/Math6.png', 'Math6'),
+        ('../public/assets/Lesson/Math7.png', 'Math7'),
+        ('../public/assets/Lesson/Math8.png', 'Math8'),
     ]
     
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name='classes')

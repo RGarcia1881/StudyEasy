@@ -25,9 +25,6 @@ SECRET_KEY = 'django-insecure-cvt*o1fh7i+c-!^c)6#m1)kucze)xe63-$9*a8la8-6xsad=np
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'coreapi',
     'study'
 ]
 
@@ -121,17 +119,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "client/src/assets/",
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / "study/",
+]
 
-# MEDIA_URL = 'client/src/assets/'
-# MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = 'assets/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Cors autorization
-CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
+
+REST_FRAMEWORK = {
+    ...: ...,
+    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+}
