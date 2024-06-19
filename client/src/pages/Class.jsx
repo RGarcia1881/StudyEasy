@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import icon from "../assets/wato.jpg";
 import "../styles/Class.css";
-import { getClasses } from "../api/classes.api";
 
 export function Class() {
   return (
