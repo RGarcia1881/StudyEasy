@@ -55,10 +55,10 @@ class Question(models.Model):
 class User(models.Model):
     
     PROFILE_PICTURE_CHOICES = [
-        ('client/src/assets/Profile/Amiko.png', 'Amiko'),
-        ('client/src/assets/Profile/Bro.png', 'Bro'),
-        ('client/src/assets/Profile/Pana.png', 'Pana'),
-        ('client/src/assets/Profile/Rafiki.png', 'Rafiki'),
+        ('../public/assets/Profile/Amiko.png', 'Amiko'),
+        ('../public/assets/Profile/Bro.png', 'Bro'),
+        ('../public/assets/Profile/Pana.png', 'Pana'),
+        ('../public/assets/Profile/Rafiki.png', 'Rafiki'),
     ]
     
     name = models.CharField(max_length=100)

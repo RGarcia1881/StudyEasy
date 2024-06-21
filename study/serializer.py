@@ -30,3 +30,14 @@ class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
         fields = '__all__'
+        
+class LoginSerializer(serializers.Serializer):
+    phone = serializers.CharField()
+    password = serializers.CharField()
+
+    def validate(self, data):
+        phone = data.get("phone")
+        password = data.get("password")
+        if not phone or not password:
+            raise serializers.ValidationError("Both phone and password are required.")
+        return data

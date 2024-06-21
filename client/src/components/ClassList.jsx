@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Subject.css";
-import { getClasses } from "../api/classes.api";
+import { getClasses } from "../api/django.api";
 
 const ClassList = () => {
   const [clases, setClases] = useState([]);
