@@ -1,22 +1,37 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import backpackImage from "../assets/Backpack.png";
 import "../styles/Home.css";
 
 export function Home() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    console.log(localStorage.getItem("user"));
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
+
   return (
     <div>
       <Navbar />
       <div className="home-container kodchasan overflow-hidden">
         {/* Welcome section */}
         <div className="welcome-section flex justify-start items-center py-10 -mb-32 -mt-32 translate-x-24 overflow-hidden">
-          <div className="text-section text-right pl-64">
-            <h1 className="text-6xl">
-              Bienvenido <span className="text-blue-600">Juan</span>
-            </h1>
-            <p className="text-2xl text-gray-600">¿Qué vamos a estudiar hoy?</p>
-          </div>
+          {user && (
+            <div className="text-section text-right pl-64">
+              <h1 className="text-6xl">
+                Bienvenido <span className="text-blue-600">{user.name}</span>
+              </h1>
+              <p className="text-2xl text-gray-600">
+                ¿Qué vamos a estudiar hoy?
+              </p>
+            </div>
+          )}
+
           <div className="image-section">
             <img
               src={backpackImage}

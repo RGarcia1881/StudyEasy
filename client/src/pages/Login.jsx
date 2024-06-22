@@ -18,11 +18,11 @@ export const Login = () => {
 
   const onSubmit = async (data) => {
     const response = await loginUser(data);
+
     if (response.message === "Login successful") {
       localStorage.setItem("token", response.token);
-      console.log(response.token);
-      console.log(data);
-      // Guarda el token si es necesario
+      localStorage.setItem("user", JSON.stringify(response.user)); // Guarda los datos del usuario en localStorage
+      Navigate("/home");
     } else {
       setError("loginError", { message: response.message });
     }

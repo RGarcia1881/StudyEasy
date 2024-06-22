@@ -16,7 +16,7 @@ router.register('progress', views.ProgressView, 'progresses')
 urlpatterns = [
     path('api/v1/', include(router.urls)),
     path('docs/', include_docs_urls(title='StudyEasy API')),
-    path ('api/v1/login/', simple_login,  name="simple_login"),
+    path ('api/v1/login/', simple_login, name="simple_login"),
     
 
 ]

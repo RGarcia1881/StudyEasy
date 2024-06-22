@@ -2,8 +2,18 @@ import React from "react";
 import logo from "../assets/StudyEasy.png"; // Logo
 import "boxicons/css/boxicons.min.css"; // Importa los estilos de Boxicons
 import "../styles/Navbar.css"; // Importa los estilos de Navbar
+import { useState, useEffect } from "react"; // Importa useState y useEffect
 
 const Navbar = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
+
   return (
     <nav className="flex items-center justify-between alignright py-5 bg-white ">
       <div className="flex items-center">
@@ -27,14 +37,20 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-2 pr-4">
-          <img
-            src="https://via.placeholder.com/40"
-            alt="Profile"
-            className="w-10 h-10 rounded-full"
-          />
-          <span className="text-black whitespace-nowrap kodchasan">
-            Juan Pérez
-          </span>
+          {user && (
+            <img
+              src={user.pic}
+              alt="Profile"
+              className="w-10 h-10 rounded-full"
+            />
+          )}
+
+          {user && (
+            <span className="text-black whitespace-nowrap kodchasan">
+              {user.name}
+            </span>
+          )}
+
           <i className="bx bx-chevron-down text-gray-500"></i>
         </div>
         <div className="pl-4 border-l border-gray-300">

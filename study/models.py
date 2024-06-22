@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Create your models here.
 class Subject(models.Model):
@@ -51,8 +52,24 @@ class Question(models.Model):
 
     def __str__(self):
         return self.text
+    
+class UserManager(BaseUserManager):
+    def create_user(self, phone, password=None, **extra_fields):
+        if not phone:
+            raise ValueError('The Phone field must be set')
+        user = self.model(phone=phone, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
 
-class User(models.Model):
+    def create_superuser(self, phone, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        return self.create_user(phone, password, **extra_fields)
+
+
+class User(AbstractBaseUser):
     
     PROFILE_PICTURE_CHOICES = [
         ('../public/assets/Profile/Amiko.png', 'Amiko'),
@@ -65,6 +82,11 @@ class User(models.Model):
     phone = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     pic = models.CharField(max_length=100, choices=PROFILE_PICTURE_CHOICES, default='client/src/assets/Profile/Cow.jpg')
+    
+    objects = UserManager()
+
+    USERNAME_FIELD = 'phone'
+    REQUIRED_FIELDS = ['name']
 
     def __str__(self):
         return self.name

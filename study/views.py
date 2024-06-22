@@ -1,7 +1,6 @@
-from rest_framework import viewsets, status, serializers
+from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from .serializer import UserSerializer, SubjectSerializer, ClassSerializer, QuizSerializer, QuestionSerializer, ProgressSerializer, LoginSerializer
 from .models import User, Subject, Class, Quiz, Question, Progress
@@ -48,7 +47,12 @@ def simple_login(request):
         if user.password != password:
             return Response({'message': 'Invalid phone or password'}, status=status.HTTP_401_UNAUTHORIZED)
 
+        user_data = UserSerializer(user).data
+        
         # Aquí es donde generarías un token si estuvieras usando JWT u otro método de autenticación
-        return Response({'message': 'Login successful'}, status=status.HTTP_200_OK)
+        return Response({
+            'user': user_data,
+            'message': 'Login successful'
+            }, status=status.HTTP_200_OK)
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
