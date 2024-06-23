@@ -28,3 +28,23 @@ export const loginUser = async (user) => {
         throw error;
     }
 };
+
+export const requestEmail = async (phone) => {
+    try {
+        const response = await authApi.post('phone/', { phone });
+        return response;
+    } catch (error) {
+        console.error('Error solicitando el telefono:', error);
+        throw error;
+    }
+};
+
+export const sendPasswordEmail = async ({ phone, email }) => {
+    try {
+        const response = await authApi.post('email/', { phone, email });
+        return response;
+    } catch (error) {
+        console.error('Error enviando el correo:', error);
+        throw error;
+    }
+};

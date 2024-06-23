@@ -14,7 +14,9 @@ const Navbar = ({ user, onLogout }) => {
     location.pathname === "/login" ||
     location.pathname === "/register" ||
     location.pathname === "/forgot" ||
-    location.pathname === "/splash"
+    location.pathname === "/splash" ||
+    location.pathname === "/forgotC" ||
+    location.pathname === "/forgotE"
   ) {
     return null;
   }

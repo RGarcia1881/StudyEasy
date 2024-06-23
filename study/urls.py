@@ -2,7 +2,7 @@ from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
 from rest_framework import routers
 from study import views
-from study.views import simple_login
+from study.views import simple_login, request_email, send_password_email
 
 #api versioning
 router = routers.DefaultRouter()
@@ -17,6 +17,8 @@ urlpatterns = [
     path('api/v1/', include(router.urls)),
     path('docs/', include_docs_urls(title='StudyEasy API')),
     path ('api/v1/login/', simple_login, name="simple_login"),
+    path('api/v1/phone/', request_email, name='request_email'),
+    path('api/v1/email/', send_password_email, name='send_password_email'),
     
 
 ]

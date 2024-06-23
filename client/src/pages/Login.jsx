@@ -30,6 +30,10 @@ export const Login = ({ onLogin }) => {
     console.log(data);
   };
 
+  const regist = () => {
+    Navigate("/register");
+  };
+
   return (
     <div className="flex justify-center items-center h-screen overflow-hidden bg-white">
       {/* Rectangles for the background */}
@@ -96,7 +100,10 @@ export const Login = ({ onLogin }) => {
       </div>
 
       <div className="absolute bottom-12 left-12 flex items-center space-x-2">
-        <button className="bg-blue-300 text-white rounded-full px-4 py-2 flex items-center cardlogin-animation">
+        <button
+          onClick={regist}
+          className="bg-blue-300 text-white rounded-full px-4 py-2 flex items-center cardlogin-animation"
+        >
           <i className="fas fa-arrow-left mr-2"></i>
           No tengo cuenta
         </button>

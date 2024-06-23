@@ -3,29 +3,30 @@ import logo from "../assets/StudyEasy.png"; // Asegúrate de que esta ruta sea c
 import "../styles/Forgot.css"; // Asegúrate de importar los estilos
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { requestEmail } from "../api/django.api";
+import { sendPasswordEmail } from "../api/django.api";
 
-export function Forgot({ onPhoneSubmitted }) {
+export function ForgotE({ phone, defaultEmail }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: { email: defaultEmail },
+  });
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     try {
-      const response = await requestEmail(data.phone);
+      const response = await sendPasswordEmail({ phone, email: data.email });
       if (response.status === 200) {
-        onPhoneSubmitted(data.phone);
-        alert("Número de teléfono encontrado");
-        navigate("/forgotE");
+        alert("Correo enviado exitosamente");
+        navigate("/forgotC");
       } else {
-        alert("Número de teléfono no encontrado");
+        alert("Error enviando el correo");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error al solicitar el correo electrónico");
+      alert("Error enviando el correo");
     }
   };
 
@@ -47,17 +48,19 @@ export function Forgot({ onPhoneSubmitted }) {
         <div className="forgot-circle-bottom"></div>
         <div className="items-center align-middle flex flex-col pt-20">
           <h1 className="forgot-title">¡No te preocupes, a todos nos pasa!</h1>
-          <p className="forgot-subtitle">Ingresa tu número de teléfono.</p>
+          <p className="forgot-subtitle">
+            Ingresa el correo electronico en donde recibiras la contraseña.
+          </p>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="forgot-input-container">
-              <i className="bx bx-phone"></i>
+              <i className="bx bx-envelope"></i>
               <input
                 type="text"
-                placeholder="Teléfono"
+                placeholder="Correo electronico"
                 className="forgot-input"
-                {...register("phone", { required: true })}
+                {...register("email", { required: true })}
               />
-              {errors.phone && <p>El número de teléfono es obligatorio</p>}
+              {errors.email && <p>El correo electrónico es obligatorio</p>}
             </div>
             <button className="forgot-button">Confirmar</button>
           </form>

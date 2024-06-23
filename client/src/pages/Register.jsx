@@ -2,11 +2,11 @@ import React from "react";
 import logo from "../assets/StudyEasy.png"; // Asegúrate de que esta ruta sea correcta
 import "../styles/Register.css";
 import "boxicons/css/boxicons.min.css";
-import { createUser } from "../api/django.api";
+import { createUser, loginUser } from "../api/django.api";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-export const Register = () => {
+export const Register = ({ onLogin }) => {
   const {
     register,
     handleSubmit,
@@ -19,10 +19,25 @@ export const Register = () => {
     Navigate("/login");
   };
 
-  const onSubmit = handleSubmit((data) => {
-    console.log(data);
-    createUser(data);
-    Navigate("/home");
+  const onSubmit = handleSubmit(async (data) => {
+    await createUser(data);
+
+    const response = await loginUser({
+      phone: data.phone,
+      password: data.password,
+    });
+
+    console.log(data.phone, data.password);
+
+    if (response.message === "Login successful") {
+      localStorage.setItem("token", response.token);
+      const userData = response.user;
+      localStorage.setItem("user", JSON.stringify(userData));
+      onLogin(userData);
+      Navigate("/home"); // Guarda los datos del usuario en localStorage
+    } else {
+      console.error("Error during login:", response.message);
+    }
   });
 
   return (
@@ -93,7 +108,10 @@ export const Register = () => {
 
       {/* Bottom buttons */}
       <div className="absolute bottom-20 right-80 flex items-center space-x-2">
-        <button className="light-orange-button text-white text-3xl kodchasan rounded-full px-4 py-2 flex items-center">
+        <button
+          onClick={Login}
+          className="light-orange-button text-white text-3xl kodchasan rounded-full px-4 py-2 flex items-center"
+        >
           <i className="fas fa-arrow-left mr-2"></i>
           Ya tengo cuenta
         </button>

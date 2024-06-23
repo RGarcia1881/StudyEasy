@@ -82,7 +82,7 @@ class User(AbstractBaseUser):
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
-    pic = models.CharField(max_length=100, choices=PROFILE_PICTURE_CHOICES, default='client/src/assets/Profile/Cow.jpg')
+    pic = models.CharField(max_length=100, choices=PROFILE_PICTURE_CHOICES, default='../public/assets/Profile/Amiko.png')
     
     objects = UserManager()
 

@@ -9,10 +9,14 @@ import { Subject } from "./pages/Subject";
 import { SubjectM } from "./pages/SubjectM";
 import { Forgot } from "./pages/Forgot";
 import { Profile } from "./pages/Profile";
+import { ForgotC } from "./pages/ForgotC";
+import { ForgotE } from "./pages/ForgotE";
 import Navbar from "./components/Navbar";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [email, setEmail] = useState(null);
 
   const handleLogin = (userData) => {
     setUser(userData);
@@ -22,6 +26,11 @@ function App() {
   const handleLogout = () => {
     setUser(null);
     localStorage.removeItem("user"); // Eliminar el usuario del almacenamiento local
+  };
+
+  const handlePhoneSubmitted = (phone, email) => {
+    setPhone(phone);
+    setEmail(email);
   };
 
   useEffect(() => {
@@ -38,11 +47,22 @@ function App() {
           <Route path="/home" element={<Home user={user} />} />
           <Route path="/splash" element={<Splash />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          <Route path="/register" element={<Register />} />
+          <Route
+            path="/register"
+            element={<Register onLogin={handleLogin} />}
+          />
           <Route path="/class/:id" element={<Class />} />
           <Route path="/esp" element={<Subject />} />
           <Route path="/math" element={<SubjectM />} />
-          <Route path="/forgot" element={<Forgot />} />
+          <Route
+            path="/forgot"
+            element={<Forgot onPhoneSubmitted={handlePhoneSubmitted} />}
+          />
+          <Route path="/forgotC" element={<ForgotC />} />
+          <Route
+            path="/forgotE"
+            element={<ForgotE phone={phone} defaultEmail={email} />}
+          />
           <Route path="/profile" element={<Profile user={user} />} />
           <Route
             path="/"
