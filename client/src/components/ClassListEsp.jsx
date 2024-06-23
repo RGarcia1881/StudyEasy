@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Subject.css";
 import { getClasses } from "../api/django.api";
+import { useNavigate } from "react-router-dom";
 
-const ClassList = () => {
+const ClassListEsp = () => {
   const [clases, setClases] = useState([]);
+  const Navigate = useNavigate();
 
   const getSubject = (ns) => {
     try {
@@ -22,7 +24,7 @@ const ClassList = () => {
       const response = await getClasses();
       // Filtrar clases para mostrar solo aquellas cuyo subject es igual a 1
       const filteredClasses = response.data.filter(
-        (clase) => clase.subject === 1
+        (clase) => clase.subject === 2
       );
       setClases(filteredClasses);
     }
@@ -34,8 +36,12 @@ const ClassList = () => {
     rows.push(clases.slice(i, i + 4));
   }
 
+  const handleCardClick = (id) => {
+    Navigate(`/class/${id}`);
+  };
+
   return (
-    <div className="study-section kodchasan m-11 w-screen h-max">
+    <div className="study-section kodchasan m-11">
       <p className="graytxt">Lista de clases</p>
       <br />
 
@@ -45,7 +51,12 @@ const ClassList = () => {
           key={rowIndex}
         >
           {row.map((clase) => (
-            <div className="study-card-container w-64" key={clase.id}>
+            <div
+              className="study-card-container w-64"
+              onClick={() => handleCardClick(clase.id)}
+              style={{ cursor: "pointer" }}
+              key={clase.id}
+            >
               <div className="study-card bg-transparent h-48 flex overflow-hidden justify-center items-center">
                 <img
                   src={clase.img}
@@ -53,12 +64,8 @@ const ClassList = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="subject-title whitespace-nowrap -translate-x-80">
-                {getSubject(clase.subject)}
-              </p>
-              <p className="subject-description whitespace-nowrap">
-                {clase.title}
-              </p>
+              <p className="subject-title">{getSubject(clase.subject)}</p>
+              <p className="subject-description">{clase.title}</p>
             </div>
           ))}
         </div>
@@ -67,4 +74,4 @@ const ClassList = () => {
   );
 };
 
-export default ClassList;
+export default ClassListEsp;

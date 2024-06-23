@@ -11,8 +11,8 @@
 }
 
 .user-icon {
-  width: 50px;
-  height: 50px;
+  width: 10%;
+  height: 10%;
   border-radius: 50%; /* Esto hace que el borde sea redondeado, creando un círculo */
   border: 4px solid #007bff; /* Esto agrega un borde de 3px de color azul */
   display: inline-block; /* Asegura que el elemento se comporte correctamente en línea con otros elementos */

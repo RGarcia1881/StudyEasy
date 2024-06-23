@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../api/django.api";
 
-export const Login = () => {
+export const Login = ({ onLogin }) => {
   const {
     register,
     handleSubmit,
@@ -22,6 +22,7 @@ export const Login = () => {
     if (response.message === "Login successful") {
       localStorage.setItem("token", response.token);
       localStorage.setItem("user", JSON.stringify(response.user)); // Guarda los datos del usuario en localStorage
+      onLogin(response.user);
       Navigate("/home");
     } else {
       setError("loginError", { message: response.message });

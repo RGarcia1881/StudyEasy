@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import backpackImage from "../assets/Backpack.png";
 import "../styles/Home.css";
 
 export function Home() {
   const [user, setUser] = useState(null);
+
+  const Navigate = useNavigate();
+
+  const espNavigation = () => {
+    Navigate("/esp");
+  };
+
+  const mathNavigation = () => {
+    Navigate("/math");
+  };
 
   useEffect(() => {
     console.log(localStorage.getItem("user"));
@@ -17,7 +27,6 @@ export function Home() {
 
   return (
     <div>
-      <Navbar />
       <div className="home-container kodchasan overflow-hidden">
         {/* Welcome section */}
         <div className="welcome-section flex justify-start items-center py-10 -mb-32 -mt-32 translate-x-24 overflow-hidden">
@@ -51,7 +60,7 @@ export function Home() {
       </div>
 
       {/* Study Section */}
-      <div className="study-section kodchasan m-11">
+      <div id="Clases" className="study-section kodchasan m-11">
         <p className="graytxt">Te quedaste en...</p>
         <br />
         <div className="study-cards flex justify-between mb-4">
@@ -86,16 +95,20 @@ export function Home() {
       </div>
 
       {/* Subjects Section */}
-      <div className="subjects-section kodchasan m-11">
+      <div id="Materias" className="subjects-section kodchasan m-11">
         <br />
         <h2 className="graytxt">Materias</h2>
         <br />
         <div className="subjects-cards flex justify-between mx-48">
-          <div className="subject-card bg spanish">
+          <div
+            onClick={espNavigation}
+            href="/esp"
+            className="subject-card bg spanish"
+          >
             <i className="bx bxs-book-open bx-lg icon text-white ml-2 mr-3"></i>
           </div>
 
-          <div className="subject-card bg math">
+          <div onClick={mathNavigation} className="subject-card bg math">
             <div className="subject-icon">
               <i className="bx bx-math bx-lg text-white ml-2 mr-3"></i>
             </div>

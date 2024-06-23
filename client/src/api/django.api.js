@@ -14,6 +14,8 @@ const authApi = axios.create({
 
 export const getClasses = async () => classApi.get('/');
 
+export const getClassDetail = async (id) => classApi.get(`/${id}/`);
+
 
 export const createUser = async (user) => userApi.post('/', user);
 

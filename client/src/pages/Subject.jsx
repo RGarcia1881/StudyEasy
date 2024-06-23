@@ -9,7 +9,6 @@ import "../styles/Subject.css";
 export function Subject() {
   return (
     <div>
-      <Navbar />
       <div className="home-container kodchasan overflow-hidden">
         {/* Welcome section */}
         <div className="welcome-section flex justify-start items-center py-10 -mb-32 -mt-32 translate-x-24 overflow-hidden">

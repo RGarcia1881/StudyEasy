@@ -1,0 +1,22 @@
+.formatted-content {
+    text-align: justify;
+    font-size: 150%; /* Justificar el texto */
+    color: #333; /* Cambiar el color principal */
+  }
+  
+  .formatted-line {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hover-word {
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s;
+    margin-right: 4px; /* Añadir espacio entre palabras */
+    cursor: default;
+  }
+  
+  .hover-word:hover {
+    transform: scale(1.1);
+    color: #007BFF;
+  }

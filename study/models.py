@@ -34,6 +34,7 @@ class Class(models.Model):
     content = models.TextField()
     link = models.CharField(max_length=100)
     img = models.CharField(max_length=100, choices=LESSON_PICTURE_OPTIONS)
+    class_number = models.IntegerField()
 
     def __str__(self):
         return self.title
