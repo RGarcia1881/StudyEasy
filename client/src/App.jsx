@@ -5,12 +5,14 @@ import { Splash } from "./pages/Splash";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Class } from "./pages/Class";
+import { ClassEsp } from "./pages/ClassEsp";
 import { Subject } from "./pages/Subject";
 import { SubjectM } from "./pages/SubjectM";
 import { Forgot } from "./pages/Forgot";
 import { Profile } from "./pages/Profile";
 import { ForgotC } from "./pages/ForgotC";
 import { ForgotE } from "./pages/ForgotE";
+
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -52,6 +54,7 @@ function App() {
             element={<Register onLogin={handleLogin} />}
           />
           <Route path="/class/:id" element={<Class />} />
+          <Route path="/classEsp/:id" element={<ClassEsp />} />
           <Route path="/esp" element={<Subject />} />
           <Route path="/math" element={<SubjectM />} />
           <Route

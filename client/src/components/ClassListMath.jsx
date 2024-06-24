@@ -3,7 +3,7 @@ import "../styles/Subject.css";
 import { getClasses } from "../api/django.api";
 import { useNavigate } from "react-router-dom";
 
-const ClassListEsp = () => {
+const ClassListMath = () => {
   const [clases, setClases] = useState([]);
   const Navigate = useNavigate();
 
@@ -14,9 +14,9 @@ const ClassListEsp = () => {
   useEffect(() => {
     async function loadClasses() {
       const response = await getClasses();
-      // Filtrar clases para mostrar solo aquellas cuyo subject es igual a 1
+      // Filtrar clases para mostrar solo aquellas cuyo subject es igual a 2
       const filteredClasses = response.data.filter(
-        (clase) => clase.subject === 1
+        (clase) => clase.subject === 2
       );
       setClases(filteredClasses);
     }
@@ -29,7 +29,7 @@ const ClassListEsp = () => {
   }
 
   const handleCardClick = (clase) => {
-    Navigate(`/classEsp/${clase.id}`);
+    Navigate(`/class/${clase.id}`);
     let recentClasses = JSON.parse(localStorage.getItem("recentClasses")) || [];
     recentClasses = recentClasses.filter((c) => c.id !== clase.id); // Evita duplicados
     recentClasses.unshift(clase); // Agrega la clase al principio del array
@@ -73,4 +73,4 @@ const ClassListEsp = () => {
   );
 };
 
-export default ClassListEsp;
+export default ClassListMath;

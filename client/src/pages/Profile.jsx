@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import icon from "../assets/wato.jpg";
+import img from "../assets/Kids.png";
 import "../styles/Profile.css";
 
 export function Profile() {
@@ -56,7 +56,7 @@ export function Profile() {
               </div>
 
               <div>
-                <img src={icon} alt="Icono" className="image-profile" />
+                <img src={img} alt="Icono" className="image-profile" />
                 <div className="decorative-balls-profile "></div>
                 <div className="ball ball-blue-profile"></div>
                 <div className="ball ball-orange-profile"></div>
@@ -94,13 +94,6 @@ export function Profile() {
                 <p className="text-lg text-center textmath w-2/5 text-gray-600">
                   Matemáticas
                 </p>
-              </div>
-            </div>
-
-            <div className="modifiable-section">
-              <p>Algunas cositas que puedes modificar...</p>
-              <div className="cositas-modificables">
-                <br></br>
               </div>
             </div>
           </div>

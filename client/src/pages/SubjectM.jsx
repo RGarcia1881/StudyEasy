@@ -4,7 +4,8 @@ import Footer from "../components/Footer";
 import backpackImage from "../assets/Utiles.png";
 import bg from "../assets/ManchaM.png";
 import "../styles/Subject.css";
-import ClassListEsp from "../components/ClassListEsp";
+import ClassListMath from "../components/ClassListMath";
+import RecentClassesMath from "../components/RecentClassesMath";
 
 export function SubjectM() {
   return (
@@ -37,42 +38,10 @@ export function SubjectM() {
       </div>
 
       {/* Study Section */}
-      <div className="study-section kodchasan m-11">
-        <p className="graytxt">Te quedaste en...</p>
-        <br />
-        <div className="study-cards flex justify-between mb-4">
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-        </div>
-      </div>
+      <RecentClassesMath />
 
       {/* Classes Section */}
-      <ClassListEsp />
+      <ClassListMath />
 
       <Footer />
     </div>

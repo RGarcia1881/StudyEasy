@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import backpackImage from "../assets/Backpack.png";
 import "../styles/Home.css";
+import RecentClassesHome from "../components/RecentClassesHome";
 
 export function Home() {
   const [user, setUser] = useState(null);
@@ -60,39 +61,7 @@ export function Home() {
       </div>
 
       {/* Study Section */}
-      <div id="Clases" className="study-section kodchasan m-11">
-        <p className="graytxt">Te quedaste en...</p>
-        <br />
-        <div className="study-cards flex justify-between mb-4">
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-
-          <div>
-            <div className="study-card w-96 h-36"></div>
-            <br />
-            <p className="subject-title">Español</p>
-            <p className="subject-description">Vocales y Abecedario</p>
-          </div>
-        </div>
-      </div>
+      <RecentClassesHome />
 
       {/* Subjects Section */}
       <div id="Materias" className="subjects-section kodchasan m-11">
